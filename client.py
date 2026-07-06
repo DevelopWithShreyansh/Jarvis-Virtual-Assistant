@@ -1,10 +1,10 @@
 from openai import OpenAI
 
-client = OpenAI()
+client = OpenAI(command)
 
 response = client.responses.create(
     model = "gpt-5.5",
-    input = ""
+    input = command
 )
 
 print(response.output_text)
